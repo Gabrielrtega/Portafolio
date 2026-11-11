@@ -68,13 +68,10 @@
     ["My journey into technology began with an opportunity that sparked my curiosity and encouraged me to keep growing.", "Mi camino en la tecnología comenzó con una oportunidad que despertó mi curiosidad y me animó a seguir creciendo."],
     ["How I got into technology", "Cómo llegué a la tecnología"],
     ["I discovered the world of technology through the ¡Supérate! ADOC scholarship program. There, I started learning computer science and exploring different digital tools that have helped me develop new skills and expand my knowledge.", "Descubrí el mundo de la tecnología gracias al programa de becas ¡Supérate! ADOC. Ahí empecé a aprender informática y a explorar distintas herramientas digitales que me han ayudado a desarrollar nuevas habilidades y ampliar mis conocimientos."],
-    ["MY BEGINNING", "MI COMIENZO"],
     ["What motivates me", "Lo que me motiva"],
     ["I am motivated by the way technology makes our daily activities easier and helps us find new ways to solve problems. It is always changing, so I believe it is important to adapt, keep learning, and use new ideas to help society grow.", "Me motiva la forma en que la tecnología facilita nuestras actividades diarias y nos ayuda a encontrar nuevas maneras de resolver problemas. Cambia constantemente, así que creo que es importante adaptarse, seguir aprendiendo y usar nuevas ideas para ayudar a que la sociedad crezca."],
-    ["MY MOTIVATION", "MI MOTIVACIÓN"],
     ["My future goals", "Mis metas a futuro"],
     ["In the future, I would like to become a psychologist and use technology as a tool to help people. After building projects like Voces de ayuda and HandBridge, I\u2019ve seen how digital solutions can reach those who need support. I want to keep growing, stay active through sports, and strengthen teamwork, empathy, and communication along the way.", "En el futuro, me gustaría convertirme en psicólogo y usar la tecnología como herramienta para ayudar a las personas. Después de crear proyectos como Voces de ayuda y HandBridge, he visto cómo las soluciones digitales pueden llegar a quienes necesitan apoyo. Quiero seguir creciendo, mantenerme activo a través del deporte y fortalecer el trabajo en equipo, la empatía y la comunicación en el camino."],
-    ["MY NEXT CHAPTER", "MI SIGUIENTE CAPÍTULO"],
 
     // Projects
     ["03 — PROJECTS", "03 — PROYECTOS"],
@@ -99,6 +96,9 @@
     ["An educational website that raises awareness about environmental care, explains major environmental problems, and shares simple tips to protect our planet.", "Un sitio web educativo que crea conciencia sobre el cuidado del medio ambiente, explica los principales problemas ambientales y comparte consejos sencillos para proteger nuestro planeta."],
     ["What I practiced", "Lo que practiqué"],
     ["Building an educational layout, organizing information, and presenting practical environmental tips.", "Crear un diseño educativo, organizar información y presentar consejos ambientales prácticos."],
+    ["My role", "Mi rol"],
+    ["Code developer", "Desarrollador del código"],
+    ["Code developer · Team project", "Desarrollador del código · Proyecto en equipo"],
     ["Explore project", "Explorar proyecto"],
     ["View code", "Ver código"],
     ["An educational platform about digital safety. It helps users recognize online threats and learn how to protect their personal information.", "Una plataforma educativa sobre seguridad digital. Ayuda a los usuarios a reconocer amenazas en línea y a aprender cómo proteger su información personal."],

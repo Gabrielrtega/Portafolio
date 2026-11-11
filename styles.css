@@ -74,13 +74,12 @@
 .about-card:hover .about-symbol{transform:translateY(-4px) rotate(12deg);color:var(--lime)}
 .about-grid .about-card h3{font-size:18px;line-height:1.25;margin:0 0 13px;max-width:220px}
 .about-grid .about-card p{font-size:15px;line-height:1.8;flex:1}
-.about-card-tag{margin-top:24px;padding-top:13px;border-top:1px solid var(--line);font:12px var(--font-head);letter-spacing:.16em;color:var(--lime)}
 .about-card.reveal{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1),border-color .4s,box-shadow .4s}
 .about-card:nth-child(2){transition-delay:.12s}
 .about-card:nth-child(3){transition-delay:.24s}
 .about-card.reveal.visible:hover{transform:translateY(-9px)}
 @media(max-width:1050px){.about-grid{grid-template-columns:1fr 1fr}.about-grid article:last-child{grid-column:1/-1}}
-@media(max-width:650px){.about-grid{grid-template-columns:1fr}.about-grid article:last-child{grid-column:auto}.about-card{min-height:0;padding:22px}.about-card-tag{margin-top:20px}}
+@media(max-width:650px){.about-grid{grid-template-columns:1fr}.about-grid article:last-child{grid-column:auto}.about-card{min-height:0;padding:22px}}
 @media(prefers-reduced-motion:reduce){.about-card,.about-card:before,.about-card:after,.about-symbol{transition:none!important}.about-card:hover{transform:none}}
 
 /* About section layout refinement: use the full width and keep the story cards side by side. */
@@ -358,3 +357,23 @@
 .lang-opt.is-on{background:var(--lime);color:#11140b}
 @media(max-width:900px){.lang-toggle{margin-left:0}}
 @media(max-width:650px){.lang-toggle{margin-left:0;align-self:flex-start}}
+
+/* About cards no longer have a footer tag, so they don't need a tall minimum height. */
+.about-card,.about-grid .about-card{min-height:0}
+
+/* Project tags are plain text now (no borders), so they don't look like buttons. */
+.tag-list{gap:6px 8px;align-items:center}
+.tag-list span{padding:0;border:0;border-radius:0;font-size:14px;color:var(--muted);letter-spacing:.02em}
+.tag-list span + span::before{content:"·";margin-right:8px;color:var(--lime);font-weight:700}
+
+/* About cards are information only: no lift or glow on hover, so they don't look clickable. */
+.about-grid .about-card,.about-grid .about-card:hover,.about-grid .about-card.reveal.visible:hover{cursor:default}
+.about-grid .about-card:hover,.about-grid .about-card.reveal.visible:hover{transform:none;border-color:var(--line);background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));box-shadow:none}
+.about-grid .about-card:hover:before{transform:scaleX(0)}
+.about-grid .about-card:hover:after{transform:none}
+.about-grid .about-card:hover .about-symbol{transform:none;color:inherit}
+
+/* Project role (plain text, not a button) */
+.project-role{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin:14px 0 0;font-size:15px;line-height:1.5}
+.project-role .role-label{font:12px var(--font-head);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.project-role .role-value{color:var(--text)}
