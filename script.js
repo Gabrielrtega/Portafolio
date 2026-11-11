@@ -47,16 +47,21 @@ sections.forEach(section => sectionObserver.observe(section));
 // Rotating role text: each complete phrase stays readable for two seconds.
 const typedRole = document.querySelector('#typedRole');
 if (typedRole) {
-  const roles = ['student developer', 'curious problem-solver', 'lifelong learner'];
+  const roleSets = {
+    en: ['student developer', 'curious problem-solver', 'lifelong learner'],
+    es: ['estudiante desarrollador', 'solucionador de problemas curioso', 'aprendiz de por vida']
+  };
+  const currentRoles = () => roleSets[document.documentElement.lang === 'es' ? 'es' : 'en'];
   let roleIndex = 0;
-  typedRole.textContent = roles[0];
+  typedRole.textContent = currentRoles()[0];
+  document.addEventListener('portfolio:language', () => { typedRole.textContent = currentRoles()[roleIndex]; });
   if (!reduceMotion) {
     const showNextRole = () => {
       window.setTimeout(() => {
         typedRole.classList.add('role-is-changing');
         window.setTimeout(() => {
-          roleIndex = (roleIndex + 1) % roles.length;
-          typedRole.textContent = roles[roleIndex];
+          roleIndex = (roleIndex + 1) % currentRoles().length;
+          typedRole.textContent = currentRoles()[roleIndex];
           typedRole.classList.remove('role-is-changing');
           showNextRole();
         }, 380);
@@ -132,8 +137,10 @@ const certImages = [...document.querySelectorAll('.cert-preview-stage img')];
 const certCounter = document.querySelector('#certCounter');
 const certCaption = document.querySelector('#certCaption');
 const certDate = document.querySelector('#certDate');
+let currentCert = 0;
 const showCert = index => {
   if (!certImages[index] || !certRows[index]) return;
+  currentCert = index;
   certImages.forEach((image, i) => image.classList.toggle('is-active', i === index));
   certRows.forEach((row, i) => row.classList.toggle('is-current', i === index));
   if (certCounter) certCounter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(certRows.length).padStart(2, '0')}`;
@@ -145,3 +152,4 @@ certRows.forEach((row, index) => {
   row.addEventListener('focusin', () => showCert(index));
 });
 showCert(0);
+document.addEventListener('portfolio:language', () => showCert(currentCert));
